@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Para Yatır</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    background:#0b0b0b;
+    color:#fff;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    min-height:100vh;
+    background:#0e0e0e;
+}
+
+/* ÜST MENÜ */
+.top-menu{
+    display:flex;
+    gap:30px;
+    padding:15px 20px;
+    border-bottom:1px solid #333;
+}
+
+.top-menu span{
+    color:#bbb;
+    cursor:pointer;
+}
+
+.top-menu span.active{
+    color:#f5b400;
+    border-bottom:2px solid #f5b400;
+    padding-bottom:5px;
+}
+
+/* ADIM 1 */
+.step{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.step h3{
+    color:#f5b400;
+    margin:0;
+}
+
+.step p{
+    margin:8px 0 15px;
+    color:#ccc;
+}
+
+.step select{
+    width:320px;
+    padding:14px;
+    background:#111;
+    color:#fff;
+    border:1px solid #444;
+    border-radius:10px;
+    font-size:15px;
+}
+
+/* AYIRICI */
+.divider{
+    height:1px;
+    background:#333;
+    margin:20px 0;
+}
+
+/* ALT KISIM */
+.bottom{
+    display:flex;
+}
+
+.box{
+    width:50%;
+    padding:40px;
+}
+
+.box h3{
+    color:#f5b400;
+    margin:0;
+}
+
+.box p{
+    margin:8px 0 20px;
+    color:#ccc;
+}
+
+/* FAST */
+.fast-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#fff;
+    color:#000;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    width:260px;
+}
+
+.fast-box img{
+    width:60px;
+}
+
+.box small{
+    display:block;
+    margin-top:15px;
+    color:#ccc;
+}
+
+/* INPUT */
+.box input{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:none;
+    font-size:16px;
+    outline:none;
+}
+
+/* BİLGİ */
+.info{
+    font-size:13px;
+    color:#ccc;
+    margin:15px 0 25px;
+}
+
+/* BUTON */
+button{
+    width:100%;
+    padding:16px;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#f5b400;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ÜST MENÜ -->
+    <div class="top-menu">
+        <span class="active">Para Yatır</span>
+        <span>Para Çekme</span>
+        <span>Geçmiş</span>
+        <span>Kayıp Bonusu</span>
+    </div>
+
+    <!-- ADIM 1 -->
+    <div class="step">
+        <h3>Adım 1</h3>
+        <p>Bonus seç</p>
+        <select>
+            <option>Bonus istemiyorum.</option>
+            <option>%50 Hoşgeldin Bonusu</option>
+            <option>%100 Yatırım Bonusu</option>
+        </select>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ALT -->
+    <div class="bottom">
+
+        <!-- ADIM 2 -->
+        <div class="box">
+            <h3>Adım 2</h3>
+            <p>Ödeme yöntemi seç</p>
+
+            <div class="fast-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/FAST_logo.png">
+                <div>
+                    <strong>FAST</strong><br>
+                    <small>Tüm bankalar 24/7</small>
+                </div>
+            </div>
+
+            <small>Limitler ₺ 3.000 - ₺ 100.000</small>
+        </div>
+
+        <!-- ADIM 3 -->
+        <div class="box">
+            <h3>Adım 3</h3>
+            <p>Yatırma miktarını girin</p>
+
+            <input type="number" placeholder="Tutar giriniz">
+
+            <div class="info">
+                ℹ️ Lütfen sadece kendi adınıza yatırım ve çekim yapabileceğinizi unutmayınız!
+            </div>
+
+            <a href="paraa.html"
+   onclick="location.href='paraa.html'; return false;">
+  Para Yatır
+</a>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+function yatir(){
+    alert("Para yatırma işlemi başlatıldı!");
+}
+</script>
+
+<a href="/paraa.html" style="
+  display:block;
+  text-align:center;
+  padding:12px;
+  background:#28a745;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+">
+  Para Yatır
+</a>
+</body>
+</html>

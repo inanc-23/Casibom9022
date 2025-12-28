@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<title>FAST – Para Yatırma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+body{
+  font-family: system-ui, Arial, sans-serif;
+  background:#f4f6fb;
+  margin:0;
+}
+.box{
+  max-width:680px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+.header{
+  text-align:center;
+  padding:20px;
+  border-bottom:1px solid #eee;
+}
+.header h2{
+  margin:0;
+  color:#0b63ce;
+}
+.header small{
+  color:#d32f2f;
+  font-weight:600;
+}
+.step{
+  padding:15px 20px;
+  font-size:14px;
+  border-bottom:1px solid #eee;
+}
+.warn{
+  background:#fff3cd;
+  color:#856404;
+  margin:10px 20px;
+  padding:10px;
+  border-radius:8px;
+  font-size:13px;
+}
+.field{
+  padding:15px 20px;
+}
+.field label{
+  font-size:13px;
+  color:#555;
+}
+.field input{
+  width:100%;
+  margin-top:5px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:#f9fafb;
+  font-size:15px;
+}
+.copy{
+  float:right;
+  font-size:12px;
+  color:#0b63ce;
+  cursor:pointer;
+}
+.amount{
+  padding:15px 20px;
+  font-size:16px;
+  font-weight:700;
+  text-align:right;
+}
+.btn{
+  margin:20px;
+  background:#2ecc71;
+  color:#fff;
+  border:none;
+  width:calc(100% - 40px);
+  padding:16px;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="header">
+    <h2>FAST</h2>
+    <small></small>
+  </div>
+
+  <div class="step">1️⃣ Alıcı Hesap &nbsp;&nbsp;→&nbsp;&nbsp; 2️⃣ İşlem Onayı</div>
+
+  <div class="warn">
+   LÜTFEN AÇIKLAMAYI BOŞ BIRAKINIZ.
+  </div>
+
+  <div class="field">
+    <label>İsim</label>
+    <input value="HESAP SAHİBİ" disabled>
+  </div>
+
+  <div class="field">
+    <label>Hesap / IBAN</label>
+    <span class="copy" onclick="copyIban()">Kopyala</span>
+    <input id="iban" value="TR00 0000 0000 0000 0000 0000 00" disabled>
+  </div>
+
+  <div class="amount"></div>
+
+  <button class="btn" onclick="demoSubmit()">
+    Para Transfer İşlemini Gerçekleştirdim
+  </button>
+</div>
+
+<script>
+function copyIban(){
+  navigator.clipboard.writeText("TR000000000000000000000000");
+  alert(" IBAN kopyalandı");
+}
+function demoSubmit(){
+  alert(" İşlem kaydedilmedi.");
+}
+</script>
+
+</body>
+</html>
